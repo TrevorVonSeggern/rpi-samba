@@ -57,7 +57,7 @@ Example:
 docker run -d -p 445:445 \\
   -v /mnt/data:/share/data \\
   -v /mnt/backups:/share/backups \\
-  trnape/rpi-samba \\
+  rpi-samba \\
   -u "alice:abc123" \\
   -u "bob:secret" \\
   -u "guest:guest" \\
@@ -83,7 +83,7 @@ EOH
         IFS=: read sharename sharepath readwrite users <<<"$OPTARG"
         echo -n "'$sharename' "
         echo "[$sharename]" >>"$CONFIG_FILE"
-        chown smbuser "$sharepath"
+        #chown smbuser "$sharepath"
         echo -n "path '$sharepath' "
         echo "path = \"$sharepath\"" >>"$CONFIG_FILE"
         echo -n "read"

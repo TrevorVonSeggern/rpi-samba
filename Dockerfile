@@ -1,5 +1,5 @@
 FROM hypriot/rpi-alpine-scratch
-MAINTAINER Daniel S.
+MAINTAINER Trevor Von Seggern
 
 RUN apk update && apk upgrade && apk add bash samba-common-tools samba && rm -rf /var/cache/apk/*
 
